@@ -6,15 +6,17 @@ const int size = 10;
 
 int partition(int a[], int low, int high)
 {
-    int pivot_key = a[low];
+    int pivot_key = a[low];// 取值可以优化
     while(low < high)
     {
         while(low<high && a[high]>=pivot_key)
             high--;
+        // 可以使用赋值来替换交换
         int tmp = a[high];
         a[high] = a[low];
         a[low] = tmp;
 
+        // 可以优化递归
         while(low<high && a[low]<=pivot_key)
             low++;
         tmp = a[high];
