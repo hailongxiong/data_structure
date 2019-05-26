@@ -8,12 +8,11 @@ int binarySearch(int a[], int key, int size)
 {
     int mid, low, high;
     low = 0;
-    high = size;
+    high = size-1;
     while(high >= low)
     {
         //mid = (low+high)/2;
         mid = low + (key-a[low])*(high-low)/(a[high]-a[low]);
-        cout << mid;
         if (a[mid] > key)
         {
             high = mid-1;
