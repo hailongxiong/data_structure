@@ -4,10 +4,7 @@ Date: 2019-09-06
 Description: 将IPV4地址转换为32位整数
 **/
 
-#include <string>
 #include "ip_convert.h"
-
-using namespace std;
 
 /**
 Functiddon: ipConvert
