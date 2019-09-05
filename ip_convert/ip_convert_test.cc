@@ -56,7 +56,6 @@ void testSpase()
     cout << "=========test spase ip ========" << endl;
     unsigned int result = 0;
     string testIp = "   192. 168 .0.1";
-    cout << "=========test spase valid ip ========" << endl;
     cout<< "Test: spase valid ip " << testIp << endl;
     try {
         result = ipConvert(testIp);
@@ -66,7 +65,6 @@ void testSpase()
     }
 
     testIp = "192.16 8.1.1";
-    cout << "=========test spase invalid ip ========" << endl;
     cout<< "Test: spase invalid ip " << testIp << endl;
     try {
         result = ipConvert(testIp);
@@ -149,19 +147,19 @@ void testCount()
 int main()
 {
     // test vaild ip
-    testValidIp()
+    testValidIp();
 
     // test spase ip
-    testSpase()
+    testSpase();
 
     // test unexcept char ip
-    testUnexpectChar()
+    testUnexpectChar();
 
     // test int data is larger than 255
-    testBiggerInteger()
+    testBiggerInteger();
 
     // test count is not equal 4
-    testCount()
+    testCount();
 
     return 0;
 }
