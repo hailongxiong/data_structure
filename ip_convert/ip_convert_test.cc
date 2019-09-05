@@ -89,7 +89,7 @@ void testUnexpectChar()
         cerr << msg << endl;
     }
 
-    testIp = "192.16 8.1.-1";
+    testIp = "192.168 .1.-1";
     cout<< "Test: unexcept char ip " << testIp << endl;
     try {
         result = ipConvert(testIp);
