@@ -2,6 +2,8 @@
 Author: xionghailong
 Date: 2019-09-06
 Description: 对ip_convert函数进行单元测试
+g++ version: g++ (Ubuntu 5.4.0-6ubuntu1~16.04.10) 5.4.0
+编译命令：g++ ip_convert.cc ip_convert_test.cc -o ip_convert
 **/
 
 #include <string>

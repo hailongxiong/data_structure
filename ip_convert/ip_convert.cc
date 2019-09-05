@@ -20,7 +20,7 @@ unsigned int ipConvert(string ip)
     int ipSize = ip.size();
     bool numBegin = false; // 标识是否开始转换数字，开始转换设置为true
     bool noNum = false; // 标识是否可以出现数字，当数字中出现空格设置为true
-    int count = 0; //统计
+    int count = 0; //统计ip转换数字数量，正常ip是4
 
     for (int i = 0; i < ipSize; i++) {
        if(ip[i] == ' ') {
@@ -40,11 +40,13 @@ unsigned int ipConvert(string ip)
             if (tmp > 255) {
                 throw "ERROR: Int data larger than 255.";
             }
+            //累计计算数值
             result = result * 256 + tmp;
+            count++;
+
             tmp = 0;
             numBegin = false;
             noNum = false;
-            count++;
         } else {
             // ip address 有非法字符
             throw "ERROR: Ip address has invalid string.";
